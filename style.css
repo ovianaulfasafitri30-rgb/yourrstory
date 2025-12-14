@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", "Poppins", cursive;
+  background: linear-gradient(180deg, #ffd1e8, #ff9fcf);
+  color: #ff4f8b;
+  overflow-x: hidden;
+}
+
+.page {
+  min-height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.page.active {
+  display: flex;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.bear {
+  animation: sway 3s ease-in-out infinite;
+  margin: 20px 0;
+}
+
+.bear.big {
+  font-size: 80px;
+}
+
+.bear.small {
+  font-size: 50px;
+}
+
+@keyframes sway {
+  0% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+
+.btn {
+  background: #ff77b7;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #ff4f8b;
+}
+
+.btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #ff4f8b;
+}
+
+textarea {
+  width: 90%;
+  max-width: 420px;
+  height: 140px;
+  border-radius: 20px;
+  border: none;
+  padding: 15px;
+  font-family: inherit;
+  margin-bottom: 25px;
+  resize: none;
+}
+
+.emoji-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.emoji-box button {
+  background: #ffe6f2;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emoji-box span {
+  font-size: 0.7rem;
+  margin-top: 4px;
+}
+
+/* background animasi */
+.floating-bg::before,
+.floating-bg::after {
+  content: "💖 ✨ ⭐ 🎀";
+  position: fixed;
+  top: -10%;
+  left: 10%;
+  font-size: 24px;
+  opacity: 0.5;
+  animation: float 15s linear infinite;
+}
+
+.floating-bg::after {
+  left: 70%;
+  animation-duration: 20s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(120vh); }
+}
+
+#motivation {
+  max-width: 400px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
