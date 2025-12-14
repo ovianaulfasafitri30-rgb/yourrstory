@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Storyy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- background animasi -->
+  <div class="floating-bg"></div>
+
+  <!-- halaman 1 -->
+  <section class="page active" id="page1">
+    <h1 class="title">WELCOME TO YOUR STORYY</h1>
+
+    <div class="bear big">ʕ•ᴥ•ʔ</div>
+
+    <button class="btn" onclick="goToPage(2)">
+      isi ceritamu hari ini
+    </button>
+  </section>
+
+  <!-- halaman 2 -->
+  <section class="page" id="page2">
+    <h2>HOW ARE YOU TODAY?</h2>
+    <p class="subtitle">bagaimana perasaanmu hari ini?</p>
+
+    <textarea placeholder="tulis isi hatimu di sini..."></textarea>
+
+    <div class="emoji-box">
+      <button onclick="chooseMood('happy')">😊<span>Bahagia</span></button>
+      <button onclick="chooseMood('sad')">😢<span>Sedih</span></button>
+      <button onclick="chooseMood('disappointed')">😔<span>Kecewa</span></button>
+      <button onclick="chooseMood('happy')">😄<span>Senang</span></button>
+    </div>
+
+    <div class="bear small">ʕ•ᴥ•ʔ</div>
+  </section>
+
+  <!-- halaman 3 -->
+  <section class="page" id="page3">
+    <div class="bear big">ʕ•ᴥ•ʔ</div>
+    <p id="motivation"></p>
+
+    <button class="btn" onclick="goToPage(1)">
+      tulis cerita lagi
+    </button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
